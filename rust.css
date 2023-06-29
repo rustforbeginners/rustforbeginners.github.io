@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@font-face {
+    font-family: "Mononoki NF";
+    src: url("mononoki/MononokiNerdFontMono-Regular.ttf");
+}
+html {
+    height: 100vh;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+body {
+    height: 100%;
+    background-color: #18181d;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+    border: 1px solid red;
+    box-sizing: border-box;
+    height: 100px;
+}
+.misc-nav {
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+    background-color: transparent;
+    position: fixed;
+    right: 0;
+}
+.misc-nav-button {
+    height: 40px;
+    width: 40px;
+    transition: .2s ease;
+    padding: 0px;
+    margin-left: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}
+#customize {
+    background-color: rgb(255, 199, 116);
+    color: rgb(157, 94, 0);
+}
+#customize:hover {
+    transition: .2s ease;
+    color: rgb(193, 150, 86);
+}
+#contact {
+    background-color: rgb(127, 255, 127);
+    color: rgb(0, 99, 0);
+}
+#contact:hover {
+    transition: .2s ease;
+    color: rgb(0, 133, 0);
+}
+#customize-menu {
+    background-color: rgb(34, 34, 34);
+    width: max-content;
+    padding: 0px 20px 0px 10px;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 0px;
+}
+#background {
+    display: flex;
+    align-items: center;
+}
+#background-picker {
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    scale: 1.5;
+}
+.header {
+    font-size: 40px;
+    color: #4a86e8;
+}
+span {
+    color: rgb(99, 190, 255);
+}
+.page {
+    width: 750px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+a {
+    font-size: 20px;
+    color: #00ffff;
+}
+b {
+    color: rgb(255, 90, 90);
+    font-size: 20px;
+    font-weight: normal;
+}
+.code-container {
+    background-color:rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    padding: 10px;
+    color: rgb(144, 149, 164);
+    border-radius: 10px;
+}
+.code-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#keyword {
+    color: rgb(255, 203, 131);
+}
+#fn-name {
+    color: rgb(121, 255, 226);
+}
+#purple {
+    color: rgb(255, 121, 255);
+}
+#name {
+    color: #a1a1ff;
+}
+#number {
+    color: rgb(255, 199, 94);
+}
+#string {
+    color: rgb(162, 255, 181);
+}
+code {
+    font-family: "Mononoki NF";
+}
+p {
+    font-size: 20px;
+}
+* {
+    font-family: "Roboto Mono";
+}
+ul {
+    font-size: 20px;
+}

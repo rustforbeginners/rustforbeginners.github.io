@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust Documentation for Beginners</title>
+    <link rel="stylesheet" href="rust.css">
+</head>
+<body>
+    <div class="page">
+        <p class="header">Mac & Linux Installation</p>
+        <p>Depending on your <span>computer's architecture</span>, there are two different ways to install Rust. First, we will cover the installation on Mac.</p>
+        <p>1. Go to <a href="https://www.rust-lang.org/tools/install" target="_blank">www.rust-lang.org</a> and run the command (in your terminal) under the header: "Windows Subsystem for Linux".</p>
+
+        <p>2. Just continue with the "default installation".</p>
+        <p class="header">Windows Installation</p>
+        <p>Before starting the Rust installation, you must first install the C++ Build Tools from Microsoft. These will allow you to run your rust program, because Rust is written in C / C++. And since C++ is a super set of C, all C programs will work in a C++ compiler. Follow these steps to install:</p>
+        <p>1. Go to <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">https://visualstudio.microsoft.com/downloads/</a> and download the Visual Studio Community Version.</p>
+        <p>2. Click continue, then you will be met with a box menu of development kits that you can install. Click the C++ desktop development kit option. Then install.</p>
+        <p>3. Go to <a href="https://www.rust-lang.org" target="_blank">www.rust-lang.org</a> and download the correct installer for your computer's architecture. If you are on a 32-bit computer, then download the 32-bit installer, and vise versa. Continue with the "default installation".</p>
+
+        <p class="header">Creating Rust Project</p>
+        <p>Before creating our first program in Rust, we must create a folder with the essential files to compile your Rust program. Here are the steps:</p>
+        <p>1. Create an empty folder (ex. "rust_projects") and remember it's directory.</p>
+        <p>2. In your terminal or command prompt, run the cd command: <span>"cd (file_dir)"</span>.</p>
+        <p>3. While in that directory, run the <span>"cargo new (your_project_name)"</span>.</p>
+        <p>4. Open the project folder in your code editor of choice. A good option is Visual Studio Code. (which is what I will be using).</p>
+        
+        <p class="header">Layout of Rust Project</p>
+        <p>In your Rust project, you will notice 3 main (root) files: "<span>src</span>", "<span>.gitignore</span>", "<span>Cargo.toml</span>". The <span>src</span> folder contains your <span>main.rs</span> file. This is where all of your Rust code will go. The <span>.gitignore</span> file tells Git what fiels to ignore when creating a repository on GitHub. The <span>Cargo.toml</span> file lists (and you can add to) your project's dependencies (imports). You can use <a href="https://crates.io" target="_blank">https://crates.io</a> which will tell you the latest version of the crate.</p>
+
+        <p class="header">First Program</p>
+        <p>Usually, your <span>main.rs</span> file comes with some default code in it. This code will output "Hello, World!" to the standard output (usually terminal or command prompt). Outside of this statement, there is <span>fn main() {}</span>. This tells the compiler <span>main()</span> is the main function, and is going to be run. Of course, you can have other functions, but those will just contribute to the main function.</p>
+        <p>Going to your terminal, you can cd into the src folder, then run the "<span>rustc main.rs</span>" command to compile your <span>main.rs</span> file. However, this will only compile it, and not run it. To run it, go into your code editor, and there should be two new files: "<span>main.exe</span>" and "<span>main.pdb</span>". For right now, only the <span>main.exe</span> file matters. If you are on windows, you must run this in command prompt. Go to your terminal (or cmd) and run <span>main.exe</span> by saying "<span>main.exe</span>" then pressing enter.</p>
+        <p>Unlike other languages, Rust differentiates default Rust functoins and user-created functions with a "<span>!</span>" at the end of the name. This is called a macro. (println is a reserved function, called a "<span>macro</span>").</p>
+
+        <p class="header">printf Equivalent</p>
+        <p>If you know anything about the C language, you know that you can do a <span>printf("%d", 3)</span>. This is basically replacing the (decimal) placeholder (%d) with the value 3. In Rust, there is a printf equivalent. This is the basic "<span>println! / print!</span>" macro.</p>
+
+        <!-- at end of each line: <br>
+             at beginning of each indented line: &nbsp;&nbsp; -->
+        <div class="code-center">
+            <div class="code-wrapper">
+                <div class="code-container">
+                    <code>
+                        <span id="keyword">fn</span> <span id="fn-name">main</span>() {<br>
+                            &nbsp;&nbsp;<span id="purple">let</span> <span id="name">num</span>=<span id="number">3</span>;<br>
+                            &nbsp;&nbsp;<span id="fn-name">println!</span>(<span id="string">"num: {}"</span>, <span id="name">num</span>);<br>
+                        }
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <p class="header">Run your Rust Program</p>
+        <p>To run your Rust program, cd into your Rust project's directory. Then, in the standard output window (cmd or terminal), runt the <span>cargo build</span> command to compile your Rust program. After this has finished (compilation should only take about <span>half a second max</span>), run the <span>cargo run</span> command to run your program. At the bottom of the warning messages, you should see two words: "<span>Hello, World!</span>". If you see these words, you have successfully created your first Rust program.</p>
+
+        <p class="header">Error Handling</p>
+        <p>If (actually, when) an error shows up in your code, do not worry. The best thing to do when there is an error is to stay calm and <span>READ THE ERROR MESSAGES</span>. The entire reason that error messages exist is to help you fix your code. Also, unless you are exploiting or abusing Rust, <span>the Rust programming language cannot harm your computer</span>, so know that all errors do not mean that you computer is at risk, they just mean that the program wasn't able to run.</p>
+
+        <p class="header">The Binary Number System</p>
+        <p>Before understanding data types in Rust, you must have a very basic understanding of the binary number system. <b>Bi</b>nary (<b>bi</b> = 2) uses 1 and 0 instead of 0-9. You may be asking: "Well, how does it know the value of a number?". Well, each digit, going from <span>right to left</span>, holds more and more value, in a genius way. Each digit has either a 1 or 0, which represents if that value is contributing to the value of the final number. Let me explain in an example. <span>If you do not kind-of understand the binary number system after reading the following, please search for a binary tutorial.</span></p>
+
+        <div class="code-center">
+            <div class="code-wrapper">
+                <div class="code-container">
+                    <code style="text-align: center;">
+                        Binary (bits=# of digits):<br>
+                        8 bit binary: 00000000<br><br>
+                        Each digit, going from right to left has a value of:<br><br>
+                        <b>2 ^ digits_from_end</b><br><br>
+                        Example: 0101<br>
+                        Going from right to left, the digits have values of:<br>
+                        <b>0</b> (8) <b>1</b> (4) <b>0</b> (2) <b>1</b> (1)<br><br>
+                        Since the "4" and "1" bits are active (have 1s), these<br>
+                        are added to get the final product; which would be 5.<br>
+                        So, <b>0101</b> in decimal (our regular number system)<br>
+                        is <b>5</b>.
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <p class="header">Data Types</p>
+        <p><b>Warning: without reading "the binary number system", you will not understand the following.</b><br><br><span>Each variable</span> (in any programming language) is stored in memeory (RAM). Each of these variables have different types, and therefor <span>takes up different amounts of space in memory</span>. For example, an <b>i32</b> (integer with 32 bytes of memory allocated) <span>is smaller than a <b>i64</b></span>. (byte=8 bits). Here is a small list of data types in Rust:</p>
+        <ul>
+            <li>i8, i16, i32, i64, i128 (int)</li>
+            <li>String</li>
+            <li>float</li>
+            <li>double</li>
+        </ul>
+
+    </div>
+
+    <div class="misc-nav">
+
+        <div id="customize-menu">
+            <div id="background">
+                <p id="background-text">Background:</p>
+                <input type="color" id="background-picker" value="#18181d" />
+            </div>
+        </div>
+
+        <button id="contact" title="Contact Me" class="misc-nav-button"><i class="fa-solid fa-envelope"></i></button>
+        <button id="customize" title="Settings" class="misc-nav-button"><i class="fa-solid fa-sliders"></i></button>
+    </div>
+
+    <script src="rust.js"></script>
+    <script src="https://kit.fontawesome.com/4931b3c0b5.js" crossorigin="anonymous"></script>
+</body>
+</html>
